@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -9,16 +7,17 @@
     <title>Timer</title>
     <script type="module" crossorigin src="/goit-js-hw-10/1-timer.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/modulepreload-polyfill-B5Qt9EMX.js">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-BzZE4fRt.css">
+    <link rel="modulepreload" crossorigin href="/goit-js-hw-10/assets/vendor-A92OCY9B.js">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/vendor-CUZofXIC.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-10/assets/styles-CUY9Rxoj.css">
   </head>
   <body>
     <main>
-      <div class="container">
-        <h1 class="main-title">Timer</h1>
-        <a class="back-link" href="./index.html">Go back</a>
-
-        <input type="text" id="datetime-picker" />
-        <button type="button" data-start>Start</button>
+      <div class="timer-container">
+        <div class="controls-wrapper">
+          <input type="text" id="datetime-picker" />
+          <button type="button" data-start>Start</button>
+        </div>
 
         <div class="timer">
           <div class="field">
@@ -38,7 +37,7 @@
             <span class="label">Seconds</span>
           </div>
         </div>
-        </div>
+      </div>
     </main>
 
   </body>
