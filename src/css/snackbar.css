@@ -1,0 +1,107 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Змінено відступ між елементами */
+  width: 360px;
+}
+
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+}
+
+/* Стилі для поля вводу Delay */
+.form-input {
+  font-family: inherit;
+  font-size: 16px;
+  padding: 8px 16px;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 2, 1);
+  height: 40px;
+  box-sizing: border-box;
+}
+
+.form-input:hover {
+  border-color: #000;
+}
+
+.form-input:focus,
+.form-input:active {
+  border-color: #4e75ff;
+}
+
+/* Стилі для радіокнопок */
+.form-fieldset {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  padding: 0;
+  margin: 0;
+  padding-top: 24px;
+  padding-bottom: 8px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-fieldset:hover {
+  border-color: #000;
+}
+
+.form-legend {
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 0;
+  margin: 0;
+  margin-left: 16px; /* Відступ для легенди */
+}
+
+.radio-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 48px; /* Відступ між радіокнопками */
+  padding: 8px 16px;
+}
+
+.radio-label {
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Стилі для кнопки */
+.form-button {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background-color: #4e75ff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  height: 40px;
+}
+
+.form-button:hover {
+  background-color: #6c8cff;
+}
+
+/*
+ * =========================================
+ * Стилі для сповіщень iziToast згідно з макетом
+ * =========================================
+ */
+.iziToast.iziToast-color-green {
+  background: #59a10d;
+  border-bottom: 2px solid #b5ea7c;
+}
+.iziToast.iziToast-color-red {
+  background: #ef4040;
+  border-bottom: 2px solid #ffbebe;
+}

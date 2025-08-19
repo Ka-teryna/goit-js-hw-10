@@ -1,34 +1,89 @@
-/* --- СТИЛІ ДЛЯ ТАЙМЕРА --- */
+.timer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 32px;
+  padding-top: 36px;
+  padding-left: 156px;
 
-/* Стилі для інпута та кнопки */
+  
+}
+
+.controls-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+
 #datetime-picker {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400; 
   font-size: 16px;
-  padding: 8px;
-  margin-right: 8px;
-  margin-top: 20px;
-}
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
 
-button[data-start] {
-  font-size: 16px;
   padding: 8px 16px;
-  cursor: pointer;
-  border: 1px solid #ccc;
+  width: 272px;
+  height: 40px;
+  box-sizing: border-box;
+
+  border: 1px solid #808080;
   border-radius: 4px;
+  outline: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Стилі для кнопки в неактивному стані */
-button[data-start]:disabled {
+#datetime-picker:hover {
+  border-color: #000;
+}
+
+#datetime-picker:active,
+#datetime-picker:focus {
+  border-color: #4e75ff;
+}
+
+#datetime-picker:disabled {
+  background-color: #f8f8f8;
+  color: #808080;
+  border-color: #d1d1d1; /* Трохи темніший колір для кращої видимості */
   cursor: not-allowed;
-  background-color: #f0f0f0;
-  color: #a0a0a0;
-  border-color: #d0d0d0;
 }
 
-/* Стилі для самого таймера */
+/* Стилі для кнопки "Start" */
+button[data-start] {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500; /* Medium */
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+
+  padding: 8px 16px;
+  width: 75px;
+  height: 40px;
+
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #4e75ff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+button[data-start]:hover {
+  background-color: #6c8cff;
+}
+
+button[data-start]:disabled {
+  background-color: #cfcfcf;
+  color: #989898;
+  cursor: not-allowed;
+}
+
+/* Стилі для блоку таймера */
 .timer {
   display: flex;
   gap: 24px;
-  margin-top: 32px;
 }
 
 .field {
@@ -38,12 +93,27 @@ button[data-start]:disabled {
 }
 
 .value {
-  font-size: 48px;
-  font-weight: 500;
+  font-weight: 400; /* Regular */
+  font-size: 40px;
+  line-height: 1.2;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
 }
 
 .label {
-  font-size: 14px;
+  font-weight: 400; /* Regular */
+  font-size: 16px;
+  line-height: 1.5;
   text-transform: uppercase;
-  margin-top: 4px;
+  color: #2e2f42;
+}
+
+/*
+ * =========================================
+ * Стилі для сповіщень iziToast
+ * =========================================
+ */
+.iziToast.iziToast-color-red {
+  background: #ef4040;
+  border-bottom: 2px solid #ffbebe;
 }
